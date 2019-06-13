@@ -1,11 +1,11 @@
 import React, {useContext} from 'react'
 import { Card } from 'semantic-ui-react'
 import {HobbiesContext, }from '../providers/UserHobbies'
-import{UserContext} from '../providers/UserProvider'
+import {UserContext} from '../providers/UserProvider'
 
 const Hobbies = () =>{
   const {hobbies} = useContext(HobbiesContext)
-  // const {firstName} =useContext(UserContext)
+  const {firstName, lastName} =useContext(UserContext)
 
 return(
 
@@ -15,7 +15,7 @@ return(
       </Card.Content>
       <Card.Content extra>
        
-       {/* {firstName} */}
+       {firstName} {lastName}
       </Card.Content>
     </Card>
 
