@@ -7,7 +7,8 @@ import User from './User'
 class UserForm extends React.Component{
   state= {firstName: this.props.firstName,
     lastName: this.props.lastName,
-    email: this.props.email
+    email: this.props.email,
+    gender: this.props.gender,
   }
   handleChange = (e, {name, value}) => this.setState({[name]:value})
   handleSubmit = (e) =>{
@@ -20,6 +21,8 @@ class UserForm extends React.Component{
     const {firstName, lastName, email} = this.state
     return(
       <Form onSubmit={this.handleSubmit}>
+        <Form.Group widths="equal">
+
         <Form.Input
         label="First Name"
         type="text"
@@ -35,6 +38,14 @@ class UserForm extends React.Component{
         onChange={this.handleChange}
         />
         <Form.Input
+        label="Gender"
+        name="lastName"
+        value={gender}
+        onChange={this.handleChange}
+        options={genderOptions}
+        />
+        </Form.Group>
+        <Form.Input
         label="Email"
         type="text"
         name="email"
@@ -47,7 +58,10 @@ class UserForm extends React.Component{
     )
   }
 }
-
+const genderOptions =[
+  {key:"m", text: "Male", value: "Male"},
+  {key:"f", text: "Femail", value: "Femail"},
+]
 const ConnectedUserForm = (props) =>(
   <UserConsumer>
     {val =>(
@@ -57,6 +71,7 @@ const ConnectedUserForm = (props) =>(
       lastName={val.lastName}
       lastName={val.lastName}
       email={val.email}
+      gender={val.gender}
       updateUser={val.updateUser}
       updateUser={val.updateUser}
       />

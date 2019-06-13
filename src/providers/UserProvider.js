@@ -11,6 +11,7 @@ class UserProvider extends React.Component{
     firstName: "Bob", 
     lastName: "Thorton",
     email: "bob@bob.com",
+    gender: "Male",
     updateUser: (user) => this.updateUser(user), 
   }
   updateUser = (user) => {
