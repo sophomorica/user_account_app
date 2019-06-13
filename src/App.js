@@ -13,7 +13,9 @@ function App() {
     <Container>
       <Switch>
         <Route exact path = '/' render = {()=><Header as = 'h1'>Home</Header>}/>
-        <Route exact path = '/account/profile' render ={()=><UserProfile/>}/>
+        <Route exact path = '/user/profile' 
+          render ={()=><UserProfile/>}
+          />
         <Route exact path = '/about' component={About}/>
         <Route component={NoMatch}/>
       </Switch>
