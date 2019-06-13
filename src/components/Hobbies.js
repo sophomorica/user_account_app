@@ -5,19 +5,21 @@ import{UserContext} from '../providers/UserProvider'
 
 const Hobbies = () =>{
   const {hobbies} = useContext(HobbiesContext)
-  const {firstName} =useContext(UserContext)
+  // const {firstName} =useContext(UserContext)
 
-  return hobbies.map(hobby =>(
-    <Card color='blue' key={hobby.id}>
+return(
+
+  <Card >
       <Card.Content>
-        <Card.Header>{hobby.name}</Card.Header>
+        <Card.Header>{hobbies}</Card.Header>
       </Card.Content>
       <Card.Content extra>
        
-       {firstName}
+       {/* {firstName} */}
       </Card.Content>
     </Card>
-  ))
+
+)
 }
 
 export default Hobbies
