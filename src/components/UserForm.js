@@ -12,7 +12,8 @@ class UserForm extends React.Component{
   handleChange = (e, {name, value}) => this.setState({[name]:value})
   handleSubmit = (e) =>{
     e.preventDefault()
-
+    this.props.updateUser({...this.state,})
+    // this.setState({username:"", membershipLevel:""})
   }
 
   render(){
@@ -56,6 +57,8 @@ const ConnectedUserForm = (props) =>(
       lastName={val.lastName}
       lastName={val.lastName}
       email={val.email}
+      updateUser={val.updateUser}
+      updateUser={val.updateUser}
       />
     )}
   </UserConsumer>
