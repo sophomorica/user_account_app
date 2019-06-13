@@ -4,7 +4,7 @@ import React from 'react'
 export const HobbiesContext = React.createContext();
 
 class UserHobbies extends React.Component{
-  state =["batting", "boating","eating"]
+  state = {hobbies: ["battign", "boating", "breathing"]}
   render(){
     return(
       <HobbiesContext.Provder value={this.state}>

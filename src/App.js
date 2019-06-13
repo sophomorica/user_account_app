@@ -5,6 +5,7 @@ import NoMatch from './components/NoMatch'
 import UserProfile from './components/UserProfile'
 import {Switch, Route, } from 'react-router-dom'
 import {Container, Header } from 'semantic-ui-react'
+import Hobbies from './components/Hobbies'
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Route exact path = '/' render = {()=><Header as = 'h1'>Home</Header>}/>
         <Route exact path = '/user/profile' 
           render ={()=><UserProfile/>}
+          />
+        <Route exact path = '/user/hobbies' 
+          render ={()=><Hobbies/>}
           />
         <Route exact path = '/about' component={About}/>
         <Route component={NoMatch}/>
