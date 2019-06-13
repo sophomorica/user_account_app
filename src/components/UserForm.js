@@ -11,6 +11,7 @@ class UserForm extends React.Component{
     gender: this.props.gender,
   }
   handleChange = (e, {name, value}) => this.setState({[name]:value})
+  
   handleSubmit = (e) =>{
     e.preventDefault()
     this.props.updateUser({...this.state,})
@@ -20,6 +21,7 @@ class UserForm extends React.Component{
   render(){
     const {firstName, lastName, email, gender} = this.state
     return(
+      
       <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
 
