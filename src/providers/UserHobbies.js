@@ -9,9 +9,9 @@ class UserHobbies extends React.Component{
   state = {hobbies:"Eating"}
   render(){
     return(
-      <HobbiesContext.Provder value={this.state}>
+      <HobbiesContext.Provider value={this.state}>
       {this.props.children}
-    </HobbiesContext.Provder>
+    </HobbiesContext.Provider>
   )
 }
 }
