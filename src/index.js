@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {BrowserRouter} from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
-import UserProvider from './providers/UserProviderr'
+import UserProvider from './providers/UserProvider'
 
 import App from './App';
 

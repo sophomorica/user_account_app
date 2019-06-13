@@ -21,3 +21,5 @@ const Navbar = () =>(
     </NavLink>
   </Menu>
 )
+
+export default Navbar
