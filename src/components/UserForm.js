@@ -18,7 +18,7 @@ class UserForm extends React.Component{
   }
 
   render(){
-    const {firstName, lastName, email} = this.state
+    const {firstName, lastName, email, gender} = this.state
     return(
       <Form onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
@@ -37,9 +37,9 @@ class UserForm extends React.Component{
         value={lastName}
         onChange={this.handleChange}
         />
-        <Form.Input
+        <Form.Select
         label="Gender"
-        name="lastName"
+        name="gender"
         value={gender}
         onChange={this.handleChange}
         options={genderOptions}
@@ -60,7 +60,7 @@ class UserForm extends React.Component{
 }
 const genderOptions =[
   {key:"m", text: "Male", value: "Male"},
-  {key:"f", text: "Femail", value: "Femail"},
+  {key:"f", text: "Female", value: "Femail"},
 ]
 const ConnectedUserForm = (props) =>(
   <UserConsumer>
