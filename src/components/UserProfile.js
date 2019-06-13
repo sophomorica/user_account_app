@@ -6,6 +6,7 @@ const UserProfile = () =>(
   <>
     <User/>
     <UserForm/>
+  
   </>
 )
 export default UserProfile

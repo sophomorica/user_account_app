@@ -6,6 +6,7 @@ import UserProfile from './components/UserProfile'
 import {Switch, Route, } from 'react-router-dom'
 import {Container, Header } from 'semantic-ui-react'
 import Hobbies from './components/Hobbies'
+import Animals from './components/Animals'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           />
         <Route exact path = '/user/hobbies' 
           render ={()=><Hobbies/>}
+          />
+        <Route exact path = '/user/animals' 
+          render ={()=><Animals/>}
           />
         <Route exact path = '/about' component={About}/>
         <Route component={NoMatch}/>

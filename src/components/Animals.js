@@ -1,27 +1,27 @@
 import React, {useContext} from 'react'
 import { Card, Button } from 'semantic-ui-react'
-import {HobbiesContext, }from '../providers/UserHobbies'
+import {AnimalsContext, }from '../providers/UserAnimals'
 import {UserContext} from '../providers/UserProvider'
 
-const Hobbies = () =>{
-  const {hobbies} = useContext(HobbiesContext)
+const Animals = () =>{
+  const {animals} = useContext(AnimalsContext)
   const {firstName, lastName} =useContext(UserContext)
 
 
 
   return (
-    <Card>  
+    <Card>
       <Card.Content>
-        <Card.Header>{firstName} Hobbies</Card.Header>
+        <Card.Header>{firstName} has:</Card.Header>
       </Card.Content>
-      {hobbies.map(hobby =>(
+      {animals.map(animal =>(
         <Card.Content>
-        <Card.Header as ='h3'>{hobby.name}</Card.Header>
+        <Card.Header>{animal.name}</Card.Header>
       </Card.Content>
      
       ))}
       <Card.Content extra>
-        <Button>Add Hobbie</Button>
+        <Button>Add Animal</Button>
       </Card.Content>
     </Card>
   )
@@ -34,4 +34,4 @@ const Hobbies = () =>{
 
 
 
-export default Hobbies
+export default Animals

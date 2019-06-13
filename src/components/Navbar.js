@@ -29,6 +29,11 @@ const Navbar = () =>(
         Hobbies
       </Menu.Item>
     </NavLink>
+    <NavLink to='/user/animals'>
+      <Menu.Item>
+        Animals
+      </Menu.Item>
+    </NavLink>
   </Menu>
   )}
   </UserConsumer>
